@@ -1,0 +1,61 @@
+{
+  "time": "1564148682550",
+  "value": {
+    "sensors": [
+      {
+        "name": "front-sensor-1",
+        "temperature": 24,
+        "humidity": 5,
+        "powerConsumption": 70
+      },
+      {
+        "name": "front-sensor-2",
+        "temperature": 14,
+        "humidity": 3,
+        "powerConsumption": 50
+      },
+      {
+        "sensors": [
+          {
+            "name": "front-nested-1",
+            "temperature": 24,
+            "humidity": 5,
+            "powerConsumption": 70
+          },
+          {
+            "name": "front-nested-2",
+            "temperature": 14,
+            "humidity": 3,
+            "powerConsumption": 50
+          }
+        ]
+      },
+      {
+        "name": "back-plc-1",
+        "temperature": 14,
+        "powerConsumption": 50,
+        "spindle": {
+          "speed": 100,
+          "feedRate": 30
+        }
+      },
+      {
+        "name": "back-plc-2",
+        "temperature": 30,
+        "powerConsumption": 90,
+        "spindle": {
+          "speed": 200,
+          "feedRate": 50
+        },
+        "gripSensor": {
+          "pressure": 50,
+          "temperature": 30,
+          "led": {
+            "power": true,
+            "powerConsumption": 3
+          }
+        }
+      }
+    ]
+  }
+}
