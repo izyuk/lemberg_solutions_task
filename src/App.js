@@ -1,5 +1,5 @@
 import React from 'react';
-import {List, ListItem, ListItemText} from '@material-ui/core';
+import {List, ListItem, ListItemText, Divider} from '@material-ui/core';
 import {Collapse} from '@material-ui/core';
 import {ExpandLess, ExpandMore} from '@material-ui/icons';
 import data from './data/data';
@@ -12,7 +12,7 @@ class NestedList extends React.Component {
 
     magicKey = 'sensors';
 
-    recursiveMapping(object, i){
+    recursiveMapping(object, i) {
         return (
             object[this.magicKey] ?
                 <div key={i}>
@@ -25,6 +25,7 @@ class NestedList extends React.Component {
                             <ExpandMore/>
                         )}
                     </ListItem>
+                    <Divider component={'hr'}/>
                     <Collapse
                         key={i}
                         in={this.state[object.name]}
@@ -32,17 +33,19 @@ class NestedList extends React.Component {
                         unmountOnExit
                     >
                         <List disablePadding>
-                            { object[this.magicKey] && object[this.magicKey].map((item, i) => this.recursiveMapping(item, i))}
+                            {object[this.magicKey] && object[this.magicKey].map((item, i) => this.recursiveMapping(item, i))}
                         </List>
                     </Collapse>
                 </div> :
-                <ListItem
-                    button
-                    onClick={this.handleClick.bind(this, object.name)}
-                    key={i}
-                >
-                    <ListItemText primary={object.name}/>
-                </ListItem>
+                <div key={i}>
+                    <ListItem
+                        button
+                        onClick={this.handleClick.bind(this, object.name)}
+                    >
+                        <ListItemText primary={object.name}/>
+                    </ListItem>
+                    <Divider component={'hr'}/>
+                </div>
         )
     };
 
