@@ -15,29 +15,55 @@
         "powerConsumption": 50
       },
       {
-        "sensors": [
-          {
-            "name": "front-nested-1",
-            "temperature": 24,
-            "humidity": 5,
-            "powerConsumption": 70
-          },
-          {
-            "name": "front-nested-2",
-            "temperature": 14,
-            "humidity": 3,
-            "powerConsumption": 50
-          }
-        ]
-      },
-      {
-        "name": "back-plc-1",
+        "name": "Sensors of back-plc-1",
         "temperature": 14,
         "powerConsumption": 50,
         "spindle": {
           "speed": 100,
           "feedRate": 30
-        }
+        },
+        "sensors": [
+          {
+            "name": "front-nested-123",
+            "temperature": 24,
+            "humidity": 5,
+            "powerConsumption": 70
+          },
+          {
+            "name": "front-nested-231",
+            "temperature": 14,
+            "humidity": 3,
+            "powerConsumption": 50,
+            "sensors": [
+              {
+                "name": "front-nested-111111",
+                "temperature": 24,
+                "humidity": 5,
+                "powerConsumption": 70
+              },
+              {
+                "name": "front-nested-2222222",
+                "temperature": 14,
+                "humidity": 3,
+                "powerConsumption": 50,
+                "sensors": [
+                  {
+                    "name": "front-nested-999999999",
+                    "temperature": 24,
+                    "humidity": 5,
+                    "powerConsumption": 70
+                  },
+                  {
+                    "name": "front-nested-0909090909090909",
+                    "temperature": 14,
+                    "humidity": 3,
+                    "powerConsumption": 50
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "back-plc-2",
@@ -55,6 +81,40 @@
             "powerConsumption": 3
           }
         }
+      },
+      {
+        "name": "Expand to find more sensors",
+        "sensors": [
+          {
+            "name": "front-nested-1",
+            "temperature": 24,
+            "humidity": 5,
+            "powerConsumption": 70
+          },
+          {
+            "name": "front-nested-2",
+            "temperature": 14,
+            "humidity": 3,
+            "powerConsumption": 50
+          },
+          {
+            "name": "Expand to find much more sensors",
+            "sensors": [
+              {
+                "name": "front-nested-123",
+                "temperature": 24,
+                "humidity": 5,
+                "powerConsumption": 70
+              },
+              {
+                "name": "front-nested-231",
+                "temperature": 14,
+                "humidity": 3,
+                "powerConsumption": 50
+              }
+            ]
+          }
+        ]
       }
     ]
   }
